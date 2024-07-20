@@ -219,6 +219,16 @@ div#startContainer button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+.back button{
+    background-color: blue;
+    color: white;
+    font-family: monospace;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+
+}
  .resultContainer{
     text-align: center;
     display: flex;

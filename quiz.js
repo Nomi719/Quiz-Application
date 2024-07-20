@@ -242,7 +242,7 @@ totalCount.innerHTML = questions.length
 var resultContainer = document.getElementsByClassName("resultContainer")[0]
 var correctAns = document.getElementById("correctAns")
 var wrongAns = document.getElementById("wrongAns")
-
+var resultAns = document.getElementById("result")
 
 
 
@@ -360,7 +360,7 @@ function startTimer(duration, displayElement, callback) {
 }
 
 
-var quizTimeInSeconds = 300; // 1 minute timer for the quiz
+var quizTimeInSeconds = 30; // 1 minute timer for the quiz
 var display = document.getElementById('timer'); // Assuming there is an element with id 'timer' to display the timer
 var quizContainer = document.getElementById("quizContainer")
 
@@ -368,7 +368,14 @@ startTimer(quizTimeInSeconds, display, function() {
     // Callback function to execute when timer runs out
     alert('Time is up!');
        if (alert){
-              resultContainer.className = "show"
+           resultContainer.className = "show"
+          resultAns = (correctAnsCount/questions.length)*100
+          console.log(resultAns)
+          //   console.log(resultContainer)
+          //    document.getElementById("result").innerHTML = resultContainer
+          
+          result.innerHTML = resultAns 
+          result.innerHTML = "Your Score is " + resultAns + "%"
         correctAns.innerHTML = correctAnsCount
         wrongAns.innerHTML = wrongAnsCount
          quizContainer.style.display = "none"
